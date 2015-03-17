@@ -71,6 +71,8 @@ header a img[src*="logo"] {
 	width: 98%;
 	margin-left: 1%;
 	margin-right: 1%;
+	padding-left: 1%;
+	line-height: 2em;
 }
 nav {
 	position: relative;
@@ -81,6 +83,7 @@ nav {
 	background-color: black;
 	margin: 1%;	
 	float: left;
+	cursor: pointer;
 }
 .nav-section > p {
 	text-align: center;
@@ -103,7 +106,6 @@ nav {
 	color: #333333;
 	font-size: 0.9em;
 	line-height: 2.5em;
-	cursor: pointer;
 }
 
 .arrow-down {
@@ -122,8 +124,7 @@ nav {
 .menu {
 	position: relative;
 }
-.menu-caption:hover + .action-list,
-.action-list:hover {
+.nav-section:hover  .action-list {
 	display: block;
 }
 .action-list {
@@ -153,6 +154,7 @@ nav {
 	/*height: 32px;*/
 	width: 23%;
 	margin: 1%;
+	margin-bottom: 0;
 }
 .tabs li a {
 	background-color: #646464;
@@ -163,12 +165,18 @@ nav {
 	text-align: center;
 	width: 100%;
 }
-.tabs li a:hover {
+.tabs li a:hover,
+.tabs li a:visited:hover
+{
+	background-color: #ebebeb;
+	color: #646464;
+}
+:link :visited :hover :focus :active {
 	background-color: #ebebeb;
 	color: #646464;
 }
 
-/*#quick-reports,
+#quick-reports,
 #my-folders,
 #my-team-folders,
 #public-folders{	
@@ -176,7 +184,14 @@ nav {
 	position: relative;
 	width: 98%;
 	margin: 1%;
+	margin-top: 0;
 	height: 400px;	
 	background-color: #ebebeb;
 }
-*/
+
+#quick-reports:target,
+#my-folders:target,
+#my-team-folders:target,
+#public-folders:target {
+	display: block;
+}
