@@ -183,16 +183,9 @@ a {
         color: #333333;
         font-size: 0.9em;
         line-height: 2.5em;
-    }
-    .action-list li {
-    }
-    .action-list li a {
-        display: block;
-        border-bottom: 1px solid grey;
-        padding: 0 16px;
-        position: relative;
-        height: 2.5em;
-        line-height: 2.5em;
+        transition: background .7s;
+        -moz-transition: background .7s;
+        -webkit-transition: background .7s;
     }
     .arrow-down {
         width: 0;
@@ -207,15 +200,30 @@ a {
         -moz-transition: all 1s;
         -webkit-transition: all 1s;    
     }
+    .action-list li {
+        overflow: hidden;
+        height: 0;
+        border-bottom: 0px solid grey;
+        transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+    }
+    .action-list li a {
+        display: block;        
+        background-color:  #ebebeb;
+        padding: 0 16px;
+        position: relative;
+        height: 2.5em;
+        line-height: 2.5em;
+    }
+    
     .action-list {
         position: absolute;
-        overflow: hidden;
         width: 100%;
         height: 0;
-        background-color:  #ebebeb;
         color: #333333;
         font-size: 0.9em;
-        opacity: 0;   
+        opacity: 1;   
         transition: all 0.7s;
         -moz-transition: all 0.7s;
         -webkit-transition: all 0.7s;
@@ -231,9 +239,9 @@ a {
     .nav-section:hover .menu-caption {
         background: rgba(235, 235, 235, 0.9);
     }
-    .nav-section:hover .action-list {
-        opacity: 1;
-        height: 12.85em;
+    .nav-section:hover .action-list li {
+        height: 2.5em;
+        border-bottom: 1px solid ;
         transition: 0.7s;
         -webkit-transition: 0.7s;
         -moz-transition: 0.7s;
