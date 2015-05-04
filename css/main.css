@@ -107,10 +107,10 @@ a {
     color: inherit;
 }
 
-   body {
-     background: url(../img/body-background.jpg) no-repeat center center fixed;
-     background-size: cover;
-   }
+    body {
+        background: url(../img/body-background.jpg) no-repeat center center fixed;
+        background-size: cover;
+    }
    .layout-wrap {
     max-width: 1200px;
        min-width: 640px;
@@ -141,33 +141,33 @@ a {
     background-color: rgba(118, 121, 122, 0.5);
       
    }
-   .notifications {
-    height: 30px;
-    background: #ebebeb;
-    width: 98%;
-    margin-left: 1%;
-    margin-right: 1%;
-    padding-left: 1%;
-    line-height: 2em;
-   }
-   nav {
-    position: relative;
-    z-index: 20;
-   }
+    .notifications {
+        height: 30px;
+        background: #ebebeb;
+        width: 98%;
+        margin-left: 1%;
+        margin-right: 1%;
+        padding-left: 1%;
+        line-height: 2em;
+    }
+    nav {
+        position: relative;
+        z-index: 20;
+    }
 
-   .nav-section {
-    width: 31.3333%;
-    margin: 1%; 
-    float: left;
-    cursor: pointer;
-   }
-   .nav-section > p {
-    text-align: center;
-    color: #ebebeb; 
-    padding-bottom: 60px;
-    padding-top: 16px;
+    .nav-section {
+        width: 31.3333%;
+        margin: 1% 1% 0; 
+        float: left;
+        cursor: pointer;
+    }
+    .nav-section > p {
+        text-align: center;
+        color: #ebebeb; 
+        padding-bottom: 60px;
+        padding-top: 16px;
     
-   }
+    }
     .nav-section:first-child {
         background: url(../img/icons/action-report-new.png) center 70px no-repeat #000;
     }
@@ -185,14 +185,18 @@ a {
         line-height: 2.5em;
     }
     .action-list li {
-        height: 0;
-        line-height: 0;
-        transition: height 0.5s;
-        -moz-transition: height 0.5s;
-        -webkit-transition: height 0.5s;
     }
     .action-list li a {
-        line-height: 2.5em;
+        display: block;
+        border-bottom: 0px solid grey;
+        padding: 0 16px;
+        position: relative;
+        top: -10px;
+        height: 0px;
+        line-height: 0em;
+        transition: top 0.2s 0.5s, height 0.5s, line-height 0.5s, border-bottom 0.3s;
+        -moz-transition: top 0.2s 0.5s, height 0.5s, line-height 0.5s, border-bottom 0.3s;
+        -webkit-transition: top 0.2s 0.5s, height 0.5s, line-height 0.5s, border-bottom 0.3s;
     }
     .arrow-down {
         width: 0;
@@ -236,73 +240,72 @@ a {
         -webkit-transition: 0.7s;
         -moz-transition: 0.7s;
     }
-    .nav-section:hover .action-list li {
+    .nav-section:hover .action-list li a {
+        top: 0;
         height: 2.5em;
         line-height: 2.5em;
-        transition: 0.5s;
-        -webkit-transition: 0.5s;
-        -moz-transition: 0.5s;
+        border-bottom: 1px solid grey;
+        transition: top 0.2s, height 0.5s, line-height 0.5s, border-bottom 0.3s;;
+        -webkit-transition: top 0.2ss, height 0.5s, line-height 0.5s, border-bottom 0.3s;;
+        -moz-transition: top 0.2s, height 0.5s, line-height 0.5s, border-bottom 0.3s;;
     }
    
     .action-list a {
-        display: block;
-        border-bottom: 1px solid grey;
-        padding: 0 16px;
-        line-height: 2.5em;
+        
     }
-   .action-list a:hover {
-    background-color:  #E2B0B0;
-   }
-   .tabs ul{
-    display: block;
-    position: relative;
-   }
-   .tabs ul li {
-    float: left;
-    /*height: 32px;*/
-    width: 23%;
-    margin: 1%;
-    margin-bottom: 0;
-   }
-   .tabs li a {
-    background-color: #646464;
-    color: #ebebeb;
-    font-size: 1em;
-    line-height: 4em;
-    display: block;
-    text-align: center;
-    width: 100%;
-   }
-   .tabs li a:hover,
-   .tabs li a:visited:hover
-   {
-    background-color: #ebebeb;
-    color: #646464;
-   }
-   :link :visited :hover :focus :active {
-    background-color: #ebebeb;
-    color: #646464;
-   }
+    .action-list a:hover {
+        background-color:  #E2B0B0;
+    }
+    .tabs ul{
+        display: block;
+        position: relative;
+        margin-top: 1%;
+    }
+    .tabs ul li {
+        float: left;
+        /*height: 32px;*/
+        width: 23%;
+        margin: 1%;
+        margin-bottom: 0;
+    }
+    .tabs li a {
+        background-color: #646464;
+        color: #ebebeb;
+        font-size: 1em;
+        line-height: 4em;
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+    .tabs li a:hover,
+    .tabs li a:visited:hover {
+        background-color: #ebebeb;
+        color: #646464;
+    }
+    :link :visited :hover :focus :active {
+      background-color: #ebebeb;
+      color: #646464;
+    }
 
-   #quick-reports,
-   #my-folders,
-   #my-team-folders,
-   #public-folders{ 
-    display: none;
-    position: relative;
-    width: 98%;
-    margin: 1%;
-    margin-top: 0;
-    height: 400px;  
-    background-color: #ebebeb;
-   }
+    #quick-reports,
+    #my-folders,
+    #my-team-folders,
+    #public-folders { 
+        display: none;
+        position: relative;
+        width: 98%;
+        margin: 1%;
+        margin-top: 0;
+        height: 400px;  
+        background-color: #ebebeb;
+    }
 
-   #quick-reports:target,
-   #my-folders:target,
-   #my-team-folders:target,
-   #public-folders:target {
-    display: block;
-   }
+    #quick-reports:target,
+    #my-folders:target,
+    #my-team-folders:target,
+    #public-folders:target {
+        display: block;
+    }
 
 
 
