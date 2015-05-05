@@ -111,36 +111,36 @@ a {
         background: url(../img/body-background.jpg) no-repeat center center fixed;
         background-size: cover;
     }
-   .layout-wrap {
-    max-width: 1200px;
-       min-width: 640px;
-       margin: 0 auto;
-       padding-top: 16px;
-       font-family: arial ,"sans-sarif";        
-   }
-   header {
-    position: absolute;
-   }
-   header {
-    background: black;
-       width: 100%;
-       height: 70px;
+    .layout-wrap {
+        max-width: 1200px;
+        min-width: 640px;
+        margin: 0 auto;
+        padding-top: 16px;
+        font-family: arial ,"sans-sarif";        
+    }
+    header {
+        position: absolute;
+    }
+    header {
+        background: black;
+        width: 100%;
+        height: 70px;
     
-   }
-   header a img[src*="logo"] {
-    margin-left: 1%;
-   }
-   .search-box {
-    float: right;
-    margin-right: 1%;
-   }
-   .page-body {
-    position: relative;
-    top: 70px;
-    bottom: 10px;
-    background-color: rgba(118, 121, 122, 0.5);
+    }
+    header a img[src*="logo"] {
+        margin-left: 1%;
+    }
+    .search-box {
+        float: right;
+        margin-right: 1%;
+    }
+    .page-body {
+        position: relative;
+        top: 70px;
+        bottom: 10px;
+        background-color: rgba(118, 121, 122, 0.5);
       
-   }
+    }
     .notifications {
         height: 30px;
         background: #ebebeb;
@@ -220,13 +220,12 @@ a {
     .action-list {
         position: absolute;
         width: 100%;
-        height: 0;
         color: #333333;
         font-size: 0.9em;
-        opacity: 1;   
+        /*opacity: 1;   
         transition: all 0.7s;
         -moz-transition: all 0.7s;
-        -webkit-transition: all 0.7s;
+        -webkit-transition: all 0.7s;*/
     }
     .menu {
         position: relative;
