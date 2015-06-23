@@ -11,7 +11,7 @@
         <!-- Place favicon.ico in the root directory -->
 
         <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/main-sass.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
        
     </head>
@@ -21,24 +21,24 @@
         <![endif]-->
 
         <header>
-        <div class="layout-wrap">
-            <a href="#"><img src="img/logo-netcraft.svg" alt="netcraft"></a>
+            <div class="layout-wrap">
+                <a id="logo" href="#"><img src="img/logo-netcraft.svg" alt="netcraft"></a>
 
-            <form class="search-box">
-                <input type="search" name="q" placeholder="search">
-            </form>
-        </div>
-    </header>
+                <form class="search-box">
+                    <input type="search" name="q" placeholder="search">
+                </form>
+            </div>
+        </header>
 
-    <section class="page-body layout-wrap">
-        <div class="notifications">
+        <section class="page-body layout-wrap">
+            <div class="notifications">
             <p>
-                Some notifications here
+
             </p>
         </div>
 
-        <nav class="clearfix">
-            <div class="nav-section" >
+            <nav class="clearfix">
+            <div class="nav-section reports" >
                 <p>Select<br>Reporting Platform</p>
 
                 <div class="menu">
@@ -48,12 +48,12 @@
                     <ul class="action-list" role="menu">
                         <li role="menuitem"><a href="#">Corporate</a></li>
                         <li role="menuitem"><a href="#">Simple</a></li>
-                        <li role="menuitem"><a href="#">Buisness</a></li>                        
+                        <li role="menuitem"><a href="#">Buisness</a></li>
                     </ul>
                 </div>
             </div>
 
-            <div class="nav-section">
+            <div class="nav-section dashboard">
                 <p>Select<br>Dashboard</p>
 
                 <div class="menu">
@@ -70,7 +70,7 @@
                 </div>
             </div>
 
-            <div class="nav-section">
+            <div class="nav-section help">
                 <p>Help &amp;<br> Tutorials</p>
 
                 <div class="menu">
@@ -87,7 +87,7 @@
             </div>
         </nav>
 
-        <section class="tabs clearfix">
+            <section class="tabs clearfix">
             <ul class="clearfix">
                 <li><a href="#quick-reports">Quick Reports</a></li>
                 <li><a href="#my-folders">My Folders</a></li>
@@ -95,21 +95,122 @@
                 <li><a href="#public-folders">Public Folders</a></li>
             </ul>
 
-            <div id="quick-reports">
-            </div>
+            <div id="quick-reports" class="dynamicTab">
+                <div class="frame-header">
+                    <select name="" class="url-holder hidden">
+
+                    </select>
+                    <div class="icons">
+                        <a href="" class="expand-btn hidden" target="_blank"></a>
+                        <button class="setting-btn js-toggle-form"></button>
+                    </div>
+
+                    <form action="" class="setting-url visible-form">
+                            <fieldset>
+                                <legend>Report 01:</legend>
+                                <div class="input-wrap">
+                                    <label for="reportName-1">Name</label><input type="text" id="reportName-1" name="siteName" placeholder="Site name"/>
+                                </div>
+                                <div class="input-wrap">
+                                    <label for="siteUrl-1">URL</label><input type="url"  id="siteUrl-1" name="siteUrl" placeholder="http://..." />
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <legend>Report 02:</legend>
+                                <div class="input-wrap">
+                                    <label for="reportName-2">Name</label><input type="text" id="reportName-2" name="siteName" placeholder="Site name"/>
+                                </div>
+                                <div class="input-wrap">
+                                    <label for="siteUrl-2">URL</label><input type="url"  id="siteUrl-2" name="siteUrl" placeholder="http://..."/>
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <legend>Report 03:</legend>
+                                <div class="input-wrap">
+                                    <label for="reportName-3">Name</label><input type="text" id="reportName-3" name="siteName" placeholder="Site name"/>
+                                </div>
+                                <div class="input-wrap">
+                                    <label for="siteUrl-3">URL</label><input type="url"  id="siteUrl-3" name="siteUrl" placeholder="http://..."/>
+                                </div>
+                            </fieldset>
+                            <button type="submit">Save</button>
+                            <button class="cancel-btn js-toggle-form">Cancel</button>
+                        </form>
+
+
+                </div>
+
+
+                <iframe src="" ></iframe>
+            </div >
 
             <div id="my-folders">
+                <div class="frame-header">
+                    <div class="icons">
+                        <a href="http://www.paulirish.com" class="expand-btn" target="_blank"></a>
+                    </div>
+                </div>
+                <iframe src="http://www.paulirish.com" ></iframe>
             </div>
 
-            <div id="my-team-folders">
+            <div id="my-team-folders" class="dynamicTab">
+                <div class="frame-header">
+                    <select name="" class="url-holder hidden">
+                        <!--<option value="http://www.ynet.co.il" selected>Ynet</option>-->
+                        <!--<option value="http://www.walla.co.il" >Walla</option>-->
+                        <!--<option value="http://www.netcraft.co.il">Netcraft</option>-->
+                    </select>
+                    <div class="icons">
+                        <a href="" class="expand-btn hidden" target="_blank"></a>
+                        <button class="setting-btn js-toggle-form"></button>
+                    </div>
+                    <form action="" class="setting-url visible-form">
+                        <fieldset>
+                            <legend>Folder 01:</legend>
+                            <div class="input-wrap">
+                                <label for="siteName-1">Name</label><input type="text" id="siteName-1" name="siteName" placeholder="Site name"/>
+                            </div>
+                            <div class="input-wrap">
+                                <label for="siteUrl-1">URL</label><input type="url"  id="siteUrl-1" name="siteUrl" placeholder="http://..."/>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Folder 02:</legend>
+                            <div class="input-wrap">
+                                <label for="siteName-2">Name</label><input type="text" id="siteName-2" name="siteName" placeholder="Site name"/>
+                            </div>
+                            <div class="input-wrap">
+                                <label for="siteUrl-2">URL</label><input type="url"  id="siteUrl-2" name="siteUrl" placeholder="http://..."/>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Folder 03:</legend>
+                            <div class="input-wrap">
+                                <label for="siteName-3">Name</label><input type="text" id="siteName-3" name="siteName" placeholder="Site name"/>
+                            </div>
+                            <div class="input-wrap">
+                                <label for="siteUrl-3">URL</label><input type="url"  id="siteUrl-3" name="siteUrl" placeholder="http://..."/>
+                            </div>
+                        </fieldset>
+                        <button type="submit">Save</button>
+                        <button class="cancel-btn js-toggle-form">Cancel</button>
+                    </form>
+                </div>
+                <iframe src="" ></iframe>
             </div>
 
             <div id="public-folders">
+                <div class="frame-header">
+                    <div class="icons">
+                        <a href="http://addyosmani.com/" class="expand-btn" target="_blank"></a>
+                    </div>
+                </div>
+                <iframe src="http://addyosmani.com/" ></iframe>
             </div>
         </section>
-    </section>
+        </section>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
